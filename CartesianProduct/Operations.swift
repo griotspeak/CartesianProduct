@@ -7,29 +7,18 @@
 //
 
 // The goal
-// for … in { … } |<-- filter(cartProd(cartProd(seq1, seq2), seq3)) // probably an operator for cartProd
-
-infix operator |<-- {
-associativity none
-precedence 75
-}
-
-public func |<--<S : SequenceType, Input, Output where S.Generator.Element == Input>(transform:Input -> Output, source:S) -> MappedSequence<S, Output> {
-    return MappedSequence(source: source, function: transform)
-}
+// for case … in cartProd(cartProd(seq1, seq2), seq3) //  operator for cartProd?
 
 // MARK: -
 
-/// 'Cartesian product' of two sequences
-public func cartProd<LeftType: SequenceType, RightType: CollectionType>(lhs:LeftType, rhs:RightType) -> CartesianProductOf<LeftType, RightType> {
+/// 'Cartesian product' of sequence and collection (right must be collection for 'replayability')
+public func cartProd<Left: SequenceType, Right: CollectionType>(lhs:Left, rhs:Right) -> CartesianProductOf<Left, Right> {
     return CartesianProductOf(leftCollection: lhs, rightCollection: rhs)
 }
 
-// 'Cartesian product' of two sequences
-public func cartProd<A : SequenceType, B : SequenceType, RightType: CollectionType>
-    (lhs:CartesianProductOf<A, B>, rhs:RightType) ->
-    MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, RightType>, (A.Generator.Element, B.Generator.Element, RightType.Generator.Element)> {
-        let it:MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, RightType>, (A.Generator.Element, B.Generator.Element, RightType.Generator.Element)> = MappedSequence(source: cartProd(lhs, rhs: rhs)) { (leftValue, rightValue) in (leftValue.0, leftValue.1, rightValue)
+// 'Cartesian product' of a Cartesian product and a collection. Meant to help manage type explosion.
+public func cartProd<A : SequenceType, B : SequenceType, Right: CollectionType> (lhs:CartesianProductOf<A, B>, rhs:Right) -> MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, Right>, (A.Generator.Element, B.Generator.Element, Right.Generator.Element)> {
+        let it:MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, Right>, (A.Generator.Element, B.Generator.Element, Right.Generator.Element)> = MappedSequence(source: cartProd(lhs, rhs: rhs)) { (leftValue, rightValue) in (leftValue.0, leftValue.1, rightValue)
         }
         return it
 }

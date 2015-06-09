@@ -6,37 +6,37 @@
 //  Copyright (c) 2015 buttons-and-lights. All rights reserved.
 //
 
-public struct CartesianProductOf<LeftCollectionType: SequenceType, RightCollectionType: CollectionType> : SequenceType {
-    public typealias Generator = CartesianProductGenerator<LeftCollectionType, RightCollectionType>
+public struct CartesianProductOf<LSeq: SequenceType, RCol: CollectionType> : SequenceType {
+    public typealias Generator = CartesianProductGenerator<LSeq, RCol>
 
-    private let leftCollection:LeftCollectionType
-    private let rightCollection:RightCollectionType
+    private let leftCollection:LSeq
+    private let rightCollection:RCol
 
     public func generate() -> Generator {
         return CartesianProductGenerator(leftCollection: leftCollection, rightCollection: rightCollection)
     }
 
-    public init(leftCollection:LeftCollectionType, rightCollection:RightCollectionType) {
+    public init(leftCollection:LSeq, rightCollection:RCol) {
         self.leftCollection = leftCollection
         self.rightCollection = rightCollection
     }
 }
 
-public struct CartesianProductGenerator<LeftCollectionType: SequenceType, RightCollectionType: CollectionType> : GeneratorType {
+public struct CartesianProductGenerator<LSeq: SequenceType, RCol: CollectionType> : GeneratorType {
 
-    public typealias LeftElement = LeftCollectionType.Generator.Element
-    public typealias RightElement = RightCollectionType.Generator.Element
+    public typealias LeftElement = LSeq.Generator.Element
+    public typealias RightElement = RCol.Generator.Element
 
     public typealias Element = (left:LeftElement, right:RightElement)
 
 
-    internal private(set) var rightCollection: RightCollectionType
-    internal private(set) var leftGenerator: LeftCollectionType.Generator
-    internal private(set) var rightGenerator: RightCollectionType.Generator
+    internal private(set) var rightCollection: RCol
+    internal private(set) var leftGenerator: LSeq.Generator
+    internal private(set) var rightGenerator: RCol.Generator
 
-    private var left:LeftCollectionType.Generator.Element?
+    private var left:LSeq.Generator.Element?
 
-    init(leftCollection:LeftCollectionType, rightCollection:RightCollectionType) {
+    init(leftCollection:LSeq, rightCollection:RCol) {
         self.rightCollection = rightCollection
         self.leftGenerator = leftCollection.generate()
         self.rightGenerator = rightCollection.generate()
