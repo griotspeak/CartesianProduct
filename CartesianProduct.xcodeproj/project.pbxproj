@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3276EFA71B27680D00769D4A /* CartesianProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 3276EFA61B27680D00769D4A /* CartesianProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3276EFAE1B27680D00769D4A /* CartesianProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3276EFA31B27680D00769D4A /* CartesianProduct.framework */; };
+		3276EFB31B27680D00769D4A /* CartesianProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276EFB21B27680D00769D4A /* CartesianProductTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3276EFAF1B27680D00769D4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3276EF9A1B27680D00769D4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3276EFA21B27680D00769D4A;
+			remoteInfo = CartesianProduct;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3276EFA31B27680D00769D4A /* CartesianProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CartesianProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3276EFA61B27680D00769D4A /* CartesianProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartesianProduct.h; sourceTree = "<group>"; };
+		3276EFA81B27680D00769D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3276EFAD1B27680D00769D4A /* CartesianProductTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CartesianProductTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3276EFB21B27680D00769D4A /* CartesianProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartesianProductTests.swift; sourceTree = "<group>"; };
+		3276EFB41B27680D00769D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3276EF9F1B27680D00769D4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3276EFAA1B27680D00769D4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3276EFAE1B27680D00769D4A /* CartesianProduct.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3276EF991B27680C00769D4A = {
+			isa = PBXGroup;
+			children = (
+				3276EFA51B27680D00769D4A /* CartesianProduct */,
+				3276EFB11B27680D00769D4A /* CartesianProductTests */,
+				3276EFA41B27680D00769D4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3276EFA41B27680D00769D4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3276EFA31B27680D00769D4A /* CartesianProduct.framework */,
+				3276EFAD1B27680D00769D4A /* CartesianProductTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3276EFA51B27680D00769D4A /* CartesianProduct */ = {
+			isa = PBXGroup;
+			children = (
+				3276EFA61B27680D00769D4A /* CartesianProduct.h */,
+				3276EFA81B27680D00769D4A /* Info.plist */,
+			);
+			path = CartesianProduct;
+			sourceTree = "<group>";
+		};
+		3276EFB11B27680D00769D4A /* CartesianProductTests */ = {
+			isa = PBXGroup;
+			children = (
+				3276EFB21B27680D00769D4A /* CartesianProductTests.swift */,
+				3276EFB41B27680D00769D4A /* Info.plist */,
+			);
+			path = CartesianProductTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3276EFA01B27680D00769D4A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3276EFA71B27680D00769D4A /* CartesianProduct.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3276EFA21B27680D00769D4A /* CartesianProduct */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3276EFB71B27680D00769D4A /* Build configuration list for PBXNativeTarget "CartesianProduct" */;
+			buildPhases = (
+				3276EF9E1B27680D00769D4A /* Sources */,
+				3276EF9F1B27680D00769D4A /* Frameworks */,
+				3276EFA01B27680D00769D4A /* Headers */,
+				3276EFA11B27680D00769D4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CartesianProduct;
+			productName = CartesianProduct;
+			productReference = 3276EFA31B27680D00769D4A /* CartesianProduct.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3276EFAC1B27680D00769D4A /* CartesianProductTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3276EFBA1B27680D00769D4A /* Build configuration list for PBXNativeTarget "CartesianProductTests" */;
+			buildPhases = (
+				3276EFA91B27680D00769D4A /* Sources */,
+				3276EFAA1B27680D00769D4A /* Frameworks */,
+				3276EFAB1B27680D00769D4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3276EFB01B27680D00769D4A /* PBXTargetDependency */,
+			);
+			name = CartesianProductTests;
+			productName = CartesianProductTests;
+			productReference = 3276EFAD1B27680D00769D4A /* CartesianProductTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3276EF9A1B27680D00769D4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Buttons and Lights LLC";
+				TargetAttributes = {
+					3276EFA21B27680D00769D4A = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					3276EFAC1B27680D00769D4A = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 3276EF9D1B27680D00769D4A /* Build configuration list for PBXProject "CartesianProduct" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3276EF991B27680C00769D4A;
+			productRefGroup = 3276EFA41B27680D00769D4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3276EFA21B27680D00769D4A /* CartesianProduct */,
+				3276EFAC1B27680D00769D4A /* CartesianProductTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3276EFA11B27680D00769D4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3276EFAB1B27680D00769D4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3276EF9E1B27680D00769D4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3276EFA91B27680D00769D4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3276EFB31B27680D00769D4A /* CartesianProductTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3276EFB01B27680D00769D4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3276EFA21B27680D00769D4A /* CartesianProduct */;
+			targetProxy = 3276EFAF1B27680D00769D4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3276EFB51B27680D00769D4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3276EFB61B27680D00769D4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3276EFB81B27680D00769D4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = CartesianProduct/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buttonsAndLights.CartesianProduct;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3276EFB91B27680D00769D4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = CartesianProduct/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buttonsAndLights.CartesianProduct;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3276EFBB1B27680D00769D4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CartesianProductTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buttonsAndLights.CartesianProductTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3276EFBC1B27680D00769D4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CartesianProductTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buttonsAndLights.CartesianProductTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3276EF9D1B27680D00769D4A /* Build configuration list for PBXProject "CartesianProduct" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3276EFB51B27680D00769D4A /* Debug */,
+				3276EFB61B27680D00769D4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3276EFB71B27680D00769D4A /* Build configuration list for PBXNativeTarget "CartesianProduct" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3276EFB81B27680D00769D4A /* Debug */,
+				3276EFB91B27680D00769D4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3276EFBA1B27680D00769D4A /* Build configuration list for PBXNativeTarget "CartesianProductTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3276EFBB1B27680D00769D4A /* Debug */,
+				3276EFBC1B27680D00769D4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3276EF9A1B27680D00769D4A /* Project object */;
+}
