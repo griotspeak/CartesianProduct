@@ -10,6 +10,9 @@
 		3276EFA71B27680D00769D4A /* CartesianProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 3276EFA61B27680D00769D4A /* CartesianProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3276EFAE1B27680D00769D4A /* CartesianProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3276EFA31B27680D00769D4A /* CartesianProduct.framework */; };
 		3276EFB31B27680D00769D4A /* CartesianProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276EFB21B27680D00769D4A /* CartesianProductTests.swift */; };
+		3276EFC01B27682900769D4A /* Comprehension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276EFBD1B27682900769D4A /* Comprehension.swift */; };
+		3276EFC11B27682900769D4A /* MappedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276EFBE1B27682900769D4A /* MappedSequence.swift */; };
+		3276EFC21B27682900769D4A /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276EFBF1B27682900769D4A /* Operations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		3276EFAD1B27680D00769D4A /* CartesianProductTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CartesianProductTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3276EFB21B27680D00769D4A /* CartesianProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartesianProductTests.swift; sourceTree = "<group>"; };
 		3276EFB41B27680D00769D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3276EFBD1B27682900769D4A /* Comprehension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comprehension.swift; sourceTree = "<group>"; };
+		3276EFBE1B27682900769D4A /* MappedSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappedSequence.swift; sourceTree = "<group>"; };
+		3276EFBF1B27682900769D4A /* Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 		3276EFA51B27680D00769D4A /* CartesianProduct */ = {
 			isa = PBXGroup;
 			children = (
+				3276EFBD1B27682900769D4A /* Comprehension.swift */,
+				3276EFBE1B27682900769D4A /* MappedSequence.swift */,
+				3276EFBF1B27682900769D4A /* Operations.swift */,
 				3276EFA61B27680D00769D4A /* CartesianProduct.h */,
 				3276EFA81B27680D00769D4A /* Info.plist */,
 			);
@@ -142,6 +151,7 @@
 		3276EF9A1B27680D00769D4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Buttons and Lights LLC";
 				TargetAttributes = {
@@ -193,6 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3276EFC21B27682900769D4A /* Operations.swift in Sources */,
+				3276EFC01B27682900769D4A /* Comprehension.swift in Sources */,
+				3276EFC11B27682900769D4A /* MappedSequence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +315,7 @@
 		3276EFB81B27680D00769D4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -314,12 +328,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.buttonsAndLights.CartesianProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3276EFB91B27680D00769D4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
