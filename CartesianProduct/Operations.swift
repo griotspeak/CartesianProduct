@@ -25,11 +25,11 @@ public func cartProd<LeftType: SequenceType, RightType: CollectionType>(lhs:Left
     return CartesianProductOf(leftCollection: lhs, rightCollection: rhs)
 }
 
-//// 'Cartesian product' of two sequences
-//public func cartProd<A : SequenceType, B : SequenceType, RightType: CollectionType>
-//    (lhs:CartesianProductOf<A, B>, rhs:RightType) ->
-//    MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, RightType>, (A.Generator.Element, B.Generator.Element, RightType.Generator.Element)> {
-//        let it:MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, RightType>, (A.Generator.Element, B.Generator.Element, RightType.Generator.Element)> = MappedSequence(source: cartProd(lhs, rhs)) { (leftValue, rightValue) in (leftValue.0, leftValue.1, rightValue)
-//        }
-//        return it
-//}
+// 'Cartesian product' of two sequences
+public func cartProd<A : SequenceType, B : SequenceType, RightType: CollectionType>
+    (lhs:CartesianProductOf<A, B>, rhs:RightType) ->
+    MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, RightType>, (A.Generator.Element, B.Generator.Element, RightType.Generator.Element)> {
+        let it:MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, RightType>, (A.Generator.Element, B.Generator.Element, RightType.Generator.Element)> = MappedSequence(source: cartProd(lhs, rhs: rhs)) { (leftValue, rightValue) in (leftValue.0, leftValue.1, rightValue)
+        }
+        return it
+}
