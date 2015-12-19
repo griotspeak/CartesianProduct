@@ -11,14 +11,39 @@
 
 // MARK: -
 
-/// 'Cartesian product' of sequence and collection (right must be collection for 'replayability')
-public func cartProd<Left: SequenceType, Right: CollectionType>(lhs:Left, rhs:Right) -> CartesianProductOf<Left, Right> {
-    return CartesianProductOf(leftCollection: lhs, rightCollection: rhs)
+// `•` is option-8 (on my U.S. English keyboard layout)
+infix operator • {
+associativity left
+}
+
+
+/// 'Cartesian product' of two sequences
+public func •<Left: SequenceType, Right: SequenceType>(lhs:Left, rhs:Right) -> [(Left.Generator.Element, Right.Generator.Element)] {
+    return lhs.flatMap { x in  rhs.map { (x, $0) } }
 }
 
 // 'Cartesian product' of a Cartesian product and a collection. Meant to help manage type explosion.
-public func cartProd<A : SequenceType, B : SequenceType, Right: CollectionType> (lhs:CartesianProductOf<A, B>, rhs:Right) -> MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, Right>, (A.Generator.Element, B.Generator.Element, Right.Generator.Element)> {
-        let it:MappedSequence<CartesianProductOf<CartesianProductOf<A, B>, Right>, (A.Generator.Element, B.Generator.Element, Right.Generator.Element)> = MappedSequence(source: cartProd(lhs, rhs: rhs)) { (leftValue, rightValue) in (leftValue.0, leftValue.1, rightValue)
-        }
-        return it
+public func •<Left: SequenceType, Right: SequenceType, A, B where
+    Left.Generator.Element == (A, B)>(lhs:Left, rhs:Right) -> [(A, B, Right.Generator.Element)] {
+        return lhs.flatMap { x in  rhs.map { (x.0, x.1, $0) } }
+}
+
+// 'Cartesian product' of a Cartesian product and a collection. Meant to help manage type explosion.
+public func •<Left: SequenceType, Right: SequenceType, A, B, C where
+    Left.Generator.Element == (A, B, C)>(lhs:Left, rhs:Right) -> [(A, B, C, Right.Generator.Element)] {
+        return lhs.flatMap { x in  rhs.map { (x.0, x.1, x.2, $0) } }
+}
+
+// 'Cartesian product' of a Cartesian product and a collection. Meant to help manage type explosion.
+public func •<Left: SequenceType, Right: SequenceType, A, B, C, D where
+    Left.Generator.Element == (A, B, C, D)>(lhs:Left, rhs:Right) -> [(A, B, C, D, Right.Generator.Element)] {
+        return lhs.flatMap { x in  rhs.map { (x.0, x.1, x.2, x.3, $0) } }
+}
+
+// Sure would love some templates about now.
+
+// 'Cartesian product' of a Cartesian product and a collection. Meant to help manage type explosion.
+public func •<Left: SequenceType, Right: SequenceType, A, B, C, D, E where
+    Left.Generator.Element == (A, B, C, D, E)>(lhs:Left, rhs:Right) -> [(A, B, C, D, E, Right.Generator.Element)] {
+        return lhs.flatMap { x in  rhs.map { (x.0, x.1, x.2, x.3, x.4, $0) } }
 }
